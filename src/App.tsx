@@ -551,18 +551,15 @@ export default function App() {
               </div>
             </div>
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a 
-              href="https://maps.google.com/?q=Entulho+D.I.Y.,+Florian%C3%B3polis" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="w-full h-full block group relative overflow-hidden bg-stone-900"
-            >
-              <img src="/gallery/IMG_0034.jpeg" alt="Entulho DIY Map" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-stone-200 group-hover:text-white transition-colors drop-shadow-md">
-                <MapPin className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="font-bold tracking-widest uppercase text-sm drop-shadow-lg">Abrir no Google Maps</span>
-              </div>
-            </a>
+              <iframe 
+               src="https://maps.google.com/maps?q=Entulho+D.I.Y.+Skate+Spot,+Florian%C3%B3polis&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+               width="100%" 
+               height="100%" 
+               style={{ border: 0 }} 
+               allowFullScreen 
+               loading="lazy" 
+               referrerPolicy="no-referrer-when-downgrade"
+             ></iframe>
               <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="border border-stone-700 text-white px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-stone-900 transition-colors text-center">
                 {t.contato.btnInsta}
               </a>
@@ -570,18 +567,15 @@ export default function App() {
           </div>
           
           <div className="w-full h-[500px] bg-stone-900 rounded-sm overflow-hidden">
-             <a 
-              href="https://maps.google.com/?q=Entulho+D.I.Y.,+Florian%C3%B3polis" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="w-full h-full block group relative overflow-hidden bg-stone-900"
-            >
-              <img src="/gallery/IMG_0034.jpeg" alt="Entulho DIY Map" className="w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-stone-200 group-hover:text-white transition-colors drop-shadow-md">
-                <MapPin className="w-16 h-16 mb-4 drop-shadow-lg" />
-                <span className="font-bold tracking-widest uppercase text-sm drop-shadow-lg">Abrir no Google Maps</span>
-              </div>
-            </a>
+             <iframe 
+               src="https://maps.google.com/maps?q=Entulho+D.I.Y.+Skate+Spot,+Florian%C3%B3polis&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+               width="100%" 
+               height="100%" 
+               style={{ border: 0 }} 
+               allowFullScreen 
+               loading="lazy" 
+               referrerPolicy="no-referrer-when-downgrade"
+             ></iframe>
           </div>
         </div>
       </section>
