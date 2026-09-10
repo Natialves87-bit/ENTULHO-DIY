@@ -87,23 +87,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-black text-white font-sans selection:bg-stone-500 selection:text-white">
-      {/* BANNER TEMPORÁRIO PARA DOWNLOAD DO SITE */}
-      <div className="w-full bg-green-600 shadow-xl border-b-4 border-green-800">
-        <a 
-          href="/entulho-site.zip" 
-          download="entulho-site.zip"
-          onClick={(e) => {
-            // Failsafe for webviews
-            const link = document.createElement('a');
-            link.href = '/entulho-site.zip';
-            link.download = 'entulho-site.zip';
-            link.click();
-          }}
-          className="block w-full text-white p-6 text-center font-bold text-lg hover:bg-green-700 transition-colors"
-        >
-          ⬇️ CLIQUE AQUI PARA BAIXAR A VERSÃO NODE.JS (GITHUB) ⬇️
-        </a>
-      </div>
 
       {/* Navigation */}
       <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-md border-b border-stone-800">
@@ -125,7 +108,7 @@ export default function App() {
             </div>
             <a 
               href={INSTAGRAM_URL}
-              target="_top"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-stone-400 hover:text-white transition-colors p-2 -m-2 relative z-50 flex items-center justify-center"
               aria-label="Instagram"
@@ -164,7 +147,7 @@ export default function App() {
             <div className="flex gap-4 mb-4 items-center justify-between border-b border-stone-800 pb-4">
               <a 
                 href={INSTAGRAM_URL}
-                target="_top"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-stone-400 hover:text-white transition-colors p-2"
                 aria-label="Instagram"
@@ -206,7 +189,7 @@ export default function App() {
               {t.hero.desc}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="bg-white text-black px-8 py-4 font-bold text-xs tracking-widest flex items-center justify-center gap-3 hover:bg-stone-200 transition-colors uppercase">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-8 py-4 font-bold text-xs tracking-widest flex items-center justify-center gap-3 hover:bg-stone-200 transition-colors uppercase">
                 <Instagram className="w-4 h-4" /> {t.hero.btnInsta}
               </a>
               <button onClick={() => scrollTo('apista')} className="border border-stone-800 px-8 py-4 font-bold text-xs tracking-widest hover:bg-stone-900 transition-colors uppercase">
@@ -273,7 +256,7 @@ export default function App() {
             <button onClick={() => setIsPetitionOpen(true)} className="bg-white text-black px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-stone-200 transition-colors text-center">
               {t.historia.btnAbaixo}
             </button>
-            <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="border border-stone-700 text-white px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-stone-900 transition-colors text-center">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="border border-stone-700 text-white px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-stone-900 transition-colors text-center">
               {t.historia.btnFala}
             </a>
           </div>
@@ -296,7 +279,7 @@ export default function App() {
           </button>
         </div>
         <div>
-          <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-white border-b border-stone-800 pb-1 hover:border-white transition-colors">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-white border-b border-stone-800 pb-1 hover:border-white transition-colors">
             {t.doc.btn}
           </a>
         </div>
@@ -325,7 +308,7 @@ export default function App() {
             </div>
           )}
           <div className="mt-8">
-            <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-white transition-colors">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-xs font-bold uppercase tracking-widest text-stone-500 hover:text-white transition-colors">
               VER MAIS NO INSTAGRAM
             </a>
           </div>
@@ -470,7 +453,7 @@ export default function App() {
               <p className="text-stone-500 text-sm mb-8">{t.apoie.marcasDesc}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="bg-white text-black px-6 py-3 font-bold text-xs tracking-widest hover:bg-stone-200 transition-colors uppercase w-full sm:w-auto text-center">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="bg-white text-black px-6 py-3 font-bold text-xs tracking-widest hover:bg-stone-200 transition-colors uppercase w-full sm:w-auto text-center">
                 {t.apoie.btnContato}
               </a>
             </div>
@@ -490,12 +473,12 @@ export default function App() {
             {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-white text-white" />)}
           </div>
           <span className="font-bold uppercase tracking-widest text-xs text-stone-300">{t.stats.nota}</span>
-          <a href="#" target="_top" rel="noopener noreferrer" className="text-stone-500 hover:text-white uppercase tracking-widest text-xs font-bold mt-2 flex items-center gap-1 transition-colors">
+          <a href="#" target="_blank" rel="noopener noreferrer" className="text-stone-500 hover:text-white uppercase tracking-widest text-xs font-bold mt-2 flex items-center gap-1 transition-colors">
             Ver no Google Maps <ExternalLink className="w-3 h-3" />
           </a>
         </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1400px] mx-auto text-left mb-16">
-          <a href="https://share.google/i2HBwkypIcdY5HLdu" target="_top" rel="noopener noreferrer" className="bg-stone-900 border border-stone-800 p-8 flex flex-col hover:bg-stone-800 transition-colors group">
+          <a href="https://share.google/i2HBwkypIcdY5HLdu" target="_blank" rel="noopener noreferrer" className="bg-stone-900 border border-stone-800 p-8 flex flex-col hover:bg-stone-800 transition-colors group">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-white font-bold mr-4">NA</div>
               <div>
@@ -506,7 +489,7 @@ export default function App() {
             <p className="text-stone-300 text-sm italic mb-6 leading-relaxed">"DIY mais pesado que ja fui na vida. Alem da pista insana, o visual e a galera é fodaa demais"</p>
             <span className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mt-auto group-hover:text-white transition-colors">Ver no Google Maps →</span>
           </a>
-          <a href="https://share.google/cOV43m98twPNHoNQA" target="_top" rel="noopener noreferrer" className="bg-stone-900 border border-stone-800 p-8 flex flex-col hover:bg-stone-800 transition-colors group">
+          <a href="https://share.google/cOV43m98twPNHoNQA" target="_blank" rel="noopener noreferrer" className="bg-stone-900 border border-stone-800 p-8 flex flex-col hover:bg-stone-800 transition-colors group">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-white font-bold mr-4">HS</div>
               <div>
@@ -517,7 +500,7 @@ export default function App() {
             <p className="text-stone-300 text-sm italic mb-6 leading-relaxed">"O melhor pico pra andar na ilha! Primeiro looping público construído por reais construtores da área de pistas de skate, criações orgânicas, sem projeto, vindo da fonte mais pura da vivência e sabedoria dos construtores!"</p>
             <span className="text-[10px] font-bold text-stone-500 uppercase tracking-widest mt-auto group-hover:text-white transition-colors">Ver no Google Maps →</span>
           </a>
-          <a href="https://share.google/wGUJlsYTC77tdPYTd" target="_top" rel="noopener noreferrer" className="bg-stone-900 border border-stone-800 p-8 flex flex-col hover:bg-stone-800 transition-colors group">
+          <a href="https://share.google/wGUJlsYTC77tdPYTd" target="_blank" rel="noopener noreferrer" className="bg-stone-900 border border-stone-800 p-8 flex flex-col hover:bg-stone-800 transition-colors group">
             <div className="flex items-center mb-4">
               <div className="w-10 h-10 bg-stone-800 rounded-full flex items-center justify-center text-white font-bold mr-4">LV</div>
               <div>
@@ -568,25 +551,25 @@ export default function App() {
               </div>
             </div>
             <div className="flex gap-4 flex-col sm:flex-row">
-              <a href="https://maps.google.com/?q=Entulho+D.I.Y.,+Florian%C3%B3polis" target="_top" rel="noopener noreferrer" className="bg-stone-100 text-black px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-white transition-colors text-center">
+              <a href="https://maps.google.com/?q=Entulho+D.I.Y.,+Florian%C3%B3polis" target="_blank" rel="noopener noreferrer" className="bg-stone-100 text-black px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-white transition-colors text-center">
                 {t.contato.btnMaps}
               </a>
-              <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="border border-stone-700 text-white px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-stone-900 transition-colors text-center">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="border border-stone-700 text-white px-8 py-4 font-bold text-xs tracking-widest uppercase hover:bg-stone-900 transition-colors text-center">
                 {t.contato.btnInsta}
               </a>
             </div>
           </div>
           
           <div className="w-full h-[500px] bg-stone-900 rounded-sm overflow-hidden">
-             <iframe 
-               src="https://maps.google.com/maps?q=Entulho+D.I.Y.+Skate+Spot,+Florian%C3%B3polis&t=&z=17&ie=UTF8&iwloc=&output=embed" 
-               width="100%" 
-               height="100%" 
-               style={{ border: 0 }} 
-               allowFullScreen 
-               loading="lazy" 
-               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+             <a 
+              href="https://maps.google.com/?q=Entulho+D.I.Y.,+Florian%C3%B3polis" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="w-full h-full flex flex-col items-center justify-center text-stone-500 hover:text-white transition-colors bg-stone-900/50"
+            >
+              <MapPin className="w-16 h-16 mb-4" />
+              <span className="font-bold tracking-widest uppercase text-sm">Abrir no Google Maps</span>
+            </a>
           </div>
         </div>
       </section>
@@ -614,7 +597,7 @@ export default function App() {
               </li>
               <li className="flex items-center gap-3">
                 <Instagram className="w-5 h-5 shrink-0 text-stone-600" />
-                <a href={INSTAGRAM_URL} target="_top" rel="noopener noreferrer" className="hover:text-white transition-colors">@entulho.diy</a>
+                <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">@entulho.diy</a>
               </li>
             </ul>
           </div>
